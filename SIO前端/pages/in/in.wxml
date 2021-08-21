@@ -1,0 +1,14 @@
+<!--pages/in/in.wxml-->
+<view class="container"> 
+  <view class="inapply">入校申请</view>
+  <text class="line">\n</text>
+  <view class="item">
+    <view class="info">
+      <view class="inschool">入校时间：{{inschool}}</view>
+      <view class="outschool">出校时间：{{outschool}}</view>
+    </view>
+    <view class="bt_box">
+      <button bindtap="inschool" class="bt" size="mini">点击入校</button>
+    </view>
+  </view>
+</view>

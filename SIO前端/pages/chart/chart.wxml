@@ -1,0 +1,70 @@
+<!-- 顶部菜单 -->
+<view class="menu">
+  <view class="menuitem">
+    <navigator url="../admin/admin">
+      <view class="menutext"> 
+        <image src="../../image/used1.png"   mode="widthFix" class="icon">
+        </image>记录查询
+      </view>
+    </navigator>
+  </view>
+  <view class="menuitem" >
+    
+    <view class="menutext2"> 
+        <image src="../../image/chart2.png"   mode="widthFix" class="icon">
+        </image>可视化查询
+      </view>
+  </view>
+</view>
+
+
+
+
+<view class="container">
+  <!-- 标题 -->
+  <view class="title">记录查询</view>
+  <view class="line">\n</view>
+  <!-- 搜索栏 -->
+  <view class="search">
+    <!-- 身份证号查询 -->
+    <view class="searchbox">
+      <label class="searchLab">身份证</label> 
+      <input class="inputText" type="number" bindinput="IDInput" value="{{cards}}"                     placeholder="请输入身份证号"  /> 
+      
+    </view>
+    <view class="line">\n</view>
+    
+    <!-- 时间段查询 -->
+    <view class="searchbox">
+      <label class="searchLab">时间段</label> 
+      <input class="inputText" type="number" value="{{time1}}"   placeholder="起始时间xxxx-xx-xx xx:xx:xx" bindinput="time1Input" /> 
+    </view>
+    <view class="searchbox">
+      <label class="searchLab"></label> 
+      <input class="inputText" type="number"  value="{{time2}}" placeholder="截止时间xxxx-xx-xx xx:xx:xx" bindinput="time2Input" /> 
+    </view>
+    <view  class="searchbtbox" >  
+      <view class="bt_box">
+        <button bindtap="in_school" class="bt" size="mini">进校查询</button>
+      </view>
+      <view class="bt_box">  
+        <button bindtap="out_school" class="bt" size="mini">出校查询</button>
+      </view>
+    </view>
+	</view>
+</view>
+<view class="divLine"></view>
+<view class="container1">
+	<view class='echart_wrap'>
+		<ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ec1 }}"></ec-canvas>
+	</view>
+</view>
+
+
+<view class="divLine"></view>
+
+
+
+
+
+

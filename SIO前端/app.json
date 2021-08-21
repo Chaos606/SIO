@@ -1,0 +1,52 @@
+{
+  "pages":[ 
+    "pages/login/login",
+    "pages/in/in",
+    "pages/out/out",
+    "pages/apply/apply",
+    "pages/used/used",
+    "pages/register/register",
+    "pages/admin/admin",
+    "pages/chart/chart",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "SIO",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    
+    "selectedColor":"000000",
+    "color":"8a8a8a",
+    "list": [{
+      "pagePath": "pages/in/in",
+      "text": "可用申请",
+      "iconPath": "./image/in1.png",
+      "selectedIconPath": "./image/in2.png"
+    },{
+      "pagePath": "pages/out/out",
+      "text": "可用申请",
+      "iconPath": "./image/out1.png",
+      "selectedIconPath": "./image/out2.png"
+    },
+    {
+      "pagePath": "pages/apply/apply",
+      "text": "申请",
+      "iconPath": "./image/apply1.png",
+      "selectedIconPath": "./image/apply2.png"
+    }
+    ,{
+      "pagePath": "pages/used/used",
+      "text": "历史",
+      "iconPath": "./image/used1.png",
+      "selectedIconPath": "./image/used2.png"
+    }
+  ]
+  },
+  
+  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

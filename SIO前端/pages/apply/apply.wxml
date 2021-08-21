@@ -1,0 +1,73 @@
+<!--pages/apply/apply.wxml-->
+<view class="container"> 
+ <view class="register-from"> 
+    <!--空格-->
+   <text>\n\n\n</text>
+   <!-- 车牌号 -->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab"    value="{{car_number}}">车牌号</label> 
+     <input class="inputText" placeholder="请输入您的车牌号"  bindinput="car_numberinput" /> 
+   </view> 
+   <!--进校事由-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab"  value="{{thing}}"  >进校事由</label> 
+     <input class="inputText"  bindinput="thinginput" placeholder="请输入您的进校事由"  /> 
+   </view> 
+   
+   <!--健康码-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">健康码</label> 
+     <radio-group class="radioText"  bindchange="healthy_codeinput">
+      <label class="radioText" >
+        <radio value="绿"     />绿
+        <radio value="红"   />红
+      </label>   
+     </radio-group>
+   </view> 
+   <!--十四天内是否去过疫区-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">十四天内是否去过疫区  </label> 
+     <radio-group class="radioText"  bindchange="fourteeninput" >
+      <label class="radioText" >
+        <radio value="是" />是
+        <radio value="否"   />否
+      </label>   
+     </radio-group>
+   </view> 
+   <!--是否有咳嗽发热等症状-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">是否有咳嗽发热等症状  </label> 
+     <radio-group class="radioText"  bindchange="Coughinput" >
+      <label class="radioText"  >
+        <radio value="是"  />是
+        <radio value="否"  />否
+      </label>   
+     </radio-group>
+   </view> 
+   
+   <!--申请进入时间-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab"  value="{{in_school}}" >申请进入时间</label> 
+     <input class="inputText" placeholder="请输入进入学校的时间"  bindinput="in_schoolinput" /> 
+   </view>
+    <!--申请离开时间-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab"  value="{{out_school}}">申请离开时间</label> 
+     <input class="inputText"  placeholder="请输入离开学校的时间"  bindinput="out_schoolinput" /> 
+   </view> 
+ 
+    <!--提交申请-->
+   <view class="registerBtnView"> 
+     <button class="registerBtn" type="primary" bindtap="register">提交申请</button> 
+   </view> 
+
+ </view> 
+
+</view>

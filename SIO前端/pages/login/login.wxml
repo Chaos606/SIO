@@ -1,0 +1,39 @@
+
+<!--pages/login.wxml-->
+<view class="container"> 
+ 
+ <view class="login-icon"> 
+   <image class="login-img" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F18%2F01%2F15%2F4466136f6f09843c968d990308e65ae0.jpg%21r650&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625147934&t=ad9e39f88656ca0a7b8e3663aec238c7"></image> 
+ </view> 
+ <view class="login-from"> 
+
+   <!--账号-->
+   <view class="inputView"> 
+     <!-- <image class="nameImage" src="/images/name.png"></image>  -->
+     <label class="loginLab">账号</label> 
+     <input class="inputText"    value="{{username}}"    placeholder="请输入账号" bindinput="phoneInput" /> 
+   </view> 
+   <view class="line"></view> 
+   <!--密码-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="loginLab"    value="{{password}}"   >密码</label> 
+     <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> 
+   </view> 
+   <!--按钮-->
+   <view class="loginBtnView"> 
+     <button class="loginBtn" type="primary"  bindtap="login">登录</button> 
+   </view>
+    <!--注册-->
+   <view class="registerBtnView"> 
+     <button class="registerBtn" type="primary" bindtap="register">注册</button> 
+   </view> 
+
+   <view class="loginBtnView"> 
+     <button class="loginBtn" type="primary"  bindtap="adminlogin">管理员登录</button> 
+   </view>
+
+ </view> 
+
+</view>
+

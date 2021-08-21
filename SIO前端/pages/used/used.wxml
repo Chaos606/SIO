@@ -1,0 +1,20 @@
+<!--pages/used/used.wxml-->
+<!--pages/out/out.wxml-->
+<!--pages/in/in.wxml-->
+<view class="container"> 
+  <view class="inapply">出校申请记录</view>
+  <block wx:for="{{list}}"  wx:for-index='key'>
+
+  <text class="line">\n</text>
+  <view class="item">
+    <view class="info">
+      <view class="inschool">入校时间：{{item.in_school}}</view>
+      <view class="outschool">出校时间：{{item.out_school}}</view>
+      <view class="trueinschool">实际入校时间：{{item.true_in_school}}</view>
+      <view class="trueinschool">实际出校时间：{{item.true_out_school}}</view>
+    </view>
+  </view>
+ </block>
+</view>
+
+

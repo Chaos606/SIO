@@ -1,0 +1,81 @@
+
+
+<!--pages/login.wxml-->
+<view class="container"> 
+ 
+ 
+ <view class="register-from"> 
+
+   <!--账号-->
+   <view class="inputView"> 
+     <!-- <image class="nameImage" src="/images/name.png"></image>  -->
+     <label class="registerLab">账号</label> 
+     <input class="inputText"    value="{{username}}"     placeholder="请输入账号" bindinput="phoneInput" /> 
+   </view> 
+   <view class="line"></view> 
+   <!--密码-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">密码</label> 
+     <input class="inputText" password="true"    value="{{password}}" placeholder="请输入密码" bindinput="passwordInput" /> 
+   </view> 
+   <view class="line"></view> 
+   <!--确认密码-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">确认密码</label> 
+     <input class="inputText"    value="{{password2}}" password="true" placeholder="请再次输入密码" bindinput="passwordInput2" /> 
+   </view> 
+    <!--空格-->
+   <text>\n\n\n</text>
+   <!--姓名-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">姓名</label> 
+     <input    value="{{name}}"   bindinput="nameInput" class="inputText" placeholder="请输入您的姓名"  /> 
+   </view> 
+   <!--性别-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">性别</label> 
+     <input value="{{sex}}" bindinput="sexInput"  class="inputText" placeholder="请输入您的性别"  /> 
+   </view> 
+   <!--身份证号-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">身份证号</label> 
+     <input     value="{{cards}}"  bindinput="cardsInput" class="inputText" password="true" placeholder="请输入您的身份证号"  /> 
+   </view> 
+   <!--联系电话-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">联系电话</label> 
+     <input   value="{{iphone}}"  bindinput="iphoneInput"   class="inputText"  placeholder="请输入您的电话"  /> 
+   </view> 
+   <!--单位信息-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">单位信息</label> 
+     <input class="inputText"  bindinput="Unit_informationInput"  value="{{Unit_information}}" placeholder="请输入您的单位信息"  /> 
+   </view> 
+   <!--担保人-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">担保人</label> 
+     <input    value="{{guarantee}}" bindinput="guaranteeInput"  class="inputText" placeholder="请输入您的担保人"  /> 
+   </view> <!--担保人电话-->
+   <view class="inputView"> 
+     <!-- <image class="keyImage" src="/images/key.png"></image>  -->
+     <label class="registerLab">担保人电话</label> 
+     <input    value="{{guarantee_iphone}}"  bindinput="guarantee_iphoneInput" class="inputText"  placeholder="请输入担保人电话"/> 
+   </view> 
+ 
+    <!--注册-->
+   <view class="registerBtnView"> 
+     <button class="registerBtn" type="primary" bindtap="register">注册</button> 
+   </view> 
+
+ </view> 
+
+</view>
+

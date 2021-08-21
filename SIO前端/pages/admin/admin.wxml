@@ -1,0 +1,77 @@
+<!--pages/admin/admin.wxml-->
+<!-- 顶部菜单 -->
+<view class="menu">
+  <view class="menuitem">
+    <view class="menutext2"> 
+        <image src="../../image/used2.png"   mode="widthFix" class="icon">
+        </image>记录查询
+    </view>
+  </view>
+  <view class="menuitem" >
+    
+    <navigator url="../chart/chart">
+      <view class="menutext"> 
+        <image src="../../image/chart1.png"   mode="widthFix" class="icon">
+        </image>可视化查询
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+<view class="container">
+  <!-- 标题 -->
+  <view class="title">记录查询</view>
+  <view class="line">\n</view>
+  <!-- 搜索栏 -->
+  <view class="search">
+    <!-- 身份证号查询 -->
+    <view class="searchbox">
+      <label class="searchLab">身份证</label> 
+      <input class="inputText" value="{{cards}}"  type="number" placeholder="请输入身份证号" bindinput="cardsinput"/> 
+      <view class="bt_box">
+        <button bindtap="checkcards" class="bt" size="mini">查询</button>
+      </view>
+    </view>
+    <view class="line">\n</view>
+    <!-- 日期查询 -->
+    <view class="searchbox">
+      <label class="searchLab">日期</label> 
+      <input class="dateinputText" type="number" value="{{month}}" placeholder="请输入" bindinput="monthinput" /> 
+      <label class="searchLab">月</label> 
+      <input class="dateinputText" type="number" placeholder="请输入"  value="{{day}}" bindinput="dayinput" /> 
+      <label class="searchLab">日</label> 
+      <view class="bt_box">
+        <button bindtap="checkdata" class="bt" size="mini">查询</button>
+      </view>
+    </view>
+    <view class="line">\n</view>
+    <!-- 时间段查询 -->
+    <view class="searchbox">
+      <label class="searchLab">时间段</label> 
+      <input class="inputText"  value="{{time1}}" type="number" placeholder="起始时间xxxx-xx-xx xx:xx:xx" bindinput="time1input" /> 
+    </view>
+    <view class="searchbox">
+      <label class="searchLab"></label> 
+      <input class="inputText" type="number"  value="{{time2}}" placeholder="截止时间xxxx-xx-xx xx:xx:xx" bindinput="time2input" /> 
+      <view class="bt_box">
+        <button bindtap="checktime" class="bt" size="mini">查询</button>
+      </view>
+    </view>
+  </view>
+  <!-- 查询信息 -->
+  <view class="infobox" wx:for="{{list}}"   wx:key='key'>
+    <view class="infoitem">
+      <view class="box">
+      <view class="infotext">姓名：{{item.name}}</view>
+      <view class="infotext">身份证号：{{item.cards}}</view>
+      <view class="infotext">入校时间：{{item.in_school}}</view>
+      <view class="infotext">出校时间：{{item.out_school}}</view>
+      <view class="infotext">实际入校时间：{{item.true_in_school}}</view>
+      <view class="infotext">实际出校时间：{{item.true_out_school}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
